@@ -1,0 +1,15 @@
+# No runtime secrets or private evidence in this repository.
+.env
+.env.*
+!.env.example
+private/
+runtime/
+backups/
+logs/
+*.log
+*.pem
+*.key
+*.p12
+*.pfx
+.DS_Store
+__pycache__/

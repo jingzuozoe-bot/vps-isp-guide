@@ -1,0 +1,20 @@
+# Candidate only: ordinary TCP proxy, NOT a system kill switch.
+# Keep runtime copy outside repository. Add credentials locally only if needed.
+mixed-port: 17890
+allow-lan: false
+bind-address: 127.0.0.1
+mode: rule
+log-level: warning
+ipv6: false
+tun:
+  enable: false
+proxies:
+  - name: ISP-via-SSH
+    type: socks5
+    server: 127.0.0.1
+    port: 17891
+    udp: false
+    # username: ISP_USERNAME
+    # password: ISP_PASSWORD
+rules:
+  - MATCH,ISP-via-SSH

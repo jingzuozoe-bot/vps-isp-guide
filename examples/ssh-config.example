@@ -1,0 +1,14 @@
+# TEMPLATE ONLY. Replace all uppercase tokens locally before use.
+Host isp-relay
+    HostName VPS_HOST
+    User SSH_USER
+    Port SSH_PORT
+    IdentityFile KEY_FILE
+    IdentitiesOnly yes
+    StrictHostKeyChecking yes
+    ForwardAgent no
+    ExitOnForwardFailure yes
+    ServerAliveInterval 15
+    ServerAliveCountMax 3
+    ConnectTimeout 10
+    LocalForward 127.0.0.1:17891 ISP_HOST:ISP_PORT
