@@ -25,6 +25,18 @@ flowchart LR
 | 连不上、变慢、出口不对 | [按层排查](docs/08-troubleshooting.md) |
 | 准备切换系统代理或测试断网 | **先读 [离线恢复](docs/07-recovery.md)** |
 
+## 怎么启动 Claude CLI（Claude Code）
+
+打开终端，进入你想让 Claude 帮忙的项目文件夹。如果已经配好代理并登录，输入下面这条命令，出现对话提示后就可以直接提问：
+
+```sh
+claude
+```
+
+**第一次用？** 已安装 Claude Code 并配好终端代理后，先运行 `claude auth login`。在浏览器点完授权，回到刚才的终端，等登录命令结束。输入 `claude auth status`，看到 `"loggedIn": true` 后，再用 `claude -p '只回复 OK'` 试一句。收到回复就可以开始了。[Claude Code 官方安装与入门](https://code.claude.com/docs/en/quickstart)
+
+**浏览器能用，终端却报 403、提示地区不支持，或一直显示未登录？** 先核对终端用的是哪个代理端口。旧的启动别名可能仍指向已停用的端口。这里有[一步步的排查和修复方法](docs/15-claude-cli.md)，从找到端口到只给 Claude 保存配置，全程保留桌面网络设置。
+
 ## 复制给你的 Agent
 
 ```text
