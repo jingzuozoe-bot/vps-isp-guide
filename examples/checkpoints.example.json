@@ -3,6 +3,19 @@
   "release": "v0.1",
   "results": [
     {
+      "id": "C03a",
+      "status": "未测",
+      "time_with_timezone": null,
+      "platform_version": null,
+      "client_version": null,
+      "scope": "出口名声；只代表本次所查的公开库，不代表整机或账号资格",
+      "expected": "至少两家独立库的国家与城市和订单一致，且 ASN/网段未见被广泛标成住宅代理、匿名 VPN 或代理池。公开观察只用匹配、不匹配或有风险标记",
+      "observed": null,
+      "private_evidence_location": null,
+      "recovery_result": null,
+      "not_applicable_reason": null
+    },
+    {
       "id": "C04",
       "status": "未测",
       "time_with_timezone": null,

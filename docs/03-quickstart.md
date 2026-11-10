@@ -18,7 +18,7 @@
 
 ## 3. 先跑电脑的局部 TCP 路线
 
-阅读 [SSH 参考路线](04-reference-route.md)。先验证 VPS 到 ISP，再验证本地显式代理请求；此时不切系统代理、不动 DNS、不启 TUN、不启常驻服务。
+阅读 [SSH 参考路线](04-reference-route.md)。先验证 VPS 到 ISP，出口与订单一致后做 [出口名声检查](06-checkpoints.md)（C03a），再验证本地显式代理请求；此时不切系统代理、不动 DNS、不启 TUN、不启常驻服务。
 
 参考路线适合能用 OpenSSH 的 macOS/Linux。Windows 需确认 OpenSSH 和命令环境；手机必须用独立适配，不把电脑 localhost 写进手机。
 
