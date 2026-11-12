@@ -21,7 +21,7 @@
 
 ## 社区参考
 
-本段与上面的官方来源表分开。这里只保存社区经验帖的原文链接，不把它们当作供应商文档，也不据此改采购、验收或路由。
+本段与上面的官方来源表分开。这里只保存社区经验帖和社区工具仓库的原文链接，不把它们当作官方客户端或供应商文档，也不据此改采购、验收或路由。
 
 | 项目 | 内容 |
 |---|---|
@@ -46,4 +46,13 @@
 | https://support.claude.com/en/articles/14328960-identity-verification-on-claude | Anthropic 官方帮助：Identity verification on Claude |
 | https://support.claude.com/zh-CN/articles/14328960-claude-%E4%B8%8A%E7%9A%84%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81 | 同一官方帮助的中文页：Claude 上的身份验证 |
 
-这些帖子是关于海外环境，以及 Claude 注册、订阅和身份验证话题的社区写法，不是 Anthropic、IPRoyal 或其他供应商的官方文档。本库只保留链接作参考，不转载、不改写正文。出口 IP 不代替目标服务的地区、身份、支付和用途资格；本库不采用其中关于地区、身份、支付伪装或规避限制的步骤。见 [安全与账号](12-security-and-accounts.md)。
+下面这条是社区工具仓库，单独收录，不属于上表。
+
+| 项目 | 内容 |
+|---|---|
+| 原文链接 | https://github.com/YOURSJEYO/claude-switcher |
+| 作者 | YOURSJEYO |
+| 是什么 | 社区开源的本机 Fail-Closed 账号环境管理器。用途是启动 Claude 前检查代理或 TUN 是否在跑、隧道断开时停掉 Claude 桌面版和 CLI，避免流量泄漏；也可多账号隔离。它不是软路由，也不改善出口名声。许可证是 AGPL-3.0 |
+| 收录 | 2026-11-12 按仓库所有者要求收录此链接 |
+
+这些帖子是关于海外环境，以及 Claude 注册、订阅和身份验证话题的社区写法；Claude Switcher 是社区工具仓库。它们都不是 Anthropic、IPRoyal 或其他供应商的官方文档，也不是官方客户端。本库只保留链接作参考，不转载正文。收录链接不等于推荐现在安装，也不等于采用该项目。出口 IP 不代替目标服务的地区、身份、支付和用途资格；本库不采用其中关于地区、身份、支付伪装或规避限制的步骤。见 [安全与账号](12-security-and-accounts.md)。
