@@ -77,6 +77,6 @@ Agent 无法打开 GitHub？下载仓库 ZIP，解压后让它读本地 README.m
 
 ## 全部内容
 
-[原理](docs/01-basics.md) · [采购](docs/02-buying.md) · [开工](docs/03-quickstart.md) · [参考配置](docs/04-reference-route.md) · [订阅](docs/05-subscriptions.md) · [验收](docs/06-checkpoints.md) · [恢复](docs/07-recovery.md) · [排错](docs/08-troubleshooting.md) · [设备支持](docs/09-platforms.md) · [手机路线](docs/14-mobile-roadmap.md) · [失败教训](docs/10-lessons.md) · [维护与费用](docs/11-maintenance.md) · [安全与账号](docs/12-security-and-accounts.md) · [官方来源](docs/13-sources.md) · [Agent 交接](templates/handoff.md)
+[原理](docs/01-basics.md) · [采购](docs/02-buying.md) · [开工](docs/03-quickstart.md) · [参考配置](docs/04-reference-route.md) · [订阅](docs/05-subscriptions.md) · [验收](docs/06-checkpoints.md) · [恢复](docs/07-recovery.md) · [排错](docs/08-troubleshooting.md) · [设备支持](docs/09-platforms.md) · [手机路线](docs/14-mobile-roadmap.md) · [失败教训](docs/10-lessons.md) · [维护与费用](docs/11-maintenance.md) · [安全与账号](docs/12-security-and-accounts.md) · [官方来源](docs/13-sources.md) · [社区参考](docs/13-sources.md#社区参考) · [Agent 交接](templates/handoff.md)
 
 欢迎补充可复现、已脱敏的设备适配记录。默认 [MIT 许可证](LICENSE)，第三方软件与商标适用各自条款；本库与供应商无隶属关系。
