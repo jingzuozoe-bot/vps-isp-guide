@@ -53,7 +53,7 @@
 | https://support.claude.com/en/articles/14328960-identity-verification-on-claude | Anthropic 官方帮助：Identity verification on Claude |
 | https://support.claude.com/zh-CN/articles/14328960-claude-%E4%B8%8A%E7%9A%84%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81 | 同一官方帮助的中文页：Claude 上的身份验证 |
 
-下面三条仍是社区经验帖，不属于上面那张相关链接表，也不与后面的社区工具仓库混为一条。
+下面四条仍是社区经验帖，不属于上面那张相关链接表，也不与后面的社区工具仓库混为一条。
 
 | 项目 | 内容 |
 |---|---|
@@ -83,6 +83,15 @@
 | 作者 | @haoliucha（刘叉） |
 | 是什么 | X Article，题为「Clash Verge Rev + 小火箭共用一套分流规则:国内直连、海外代理、账号固定出口」。社区分流/路由经验帖，不是官方文档。正文使用的是 Loyalsoldier 规则集，不是 blackmatrix7 |
 | 收录 | 推文发布于 2026-08-29 05:10 UTC（台北时间 2026-08-29 13:10）。2026-11-12 按仓库所有者要求收录此链接；收录不等于采用文中的防封或链式代理写法 |
+
+| 项目 | 内容 |
+|---|---|
+| 原文链接 | https://x.com/ChappelDae55911/status/2118615751435358466 |
+| 作者 | @ChappelDae55911（林森） |
+| 是什么 | X 长文，题为「全网最稳定使用 Claude 的办法」。社区经验帖，不是官方文档。手机只当入口：Claude Code 装在一台常开的温哥华机房 VPS 上，用自托管开源网页工作台 CloudCLI / Claude Code UI（https://github.com/siteboon/claudecodeui）从手机接入，再用桥接程序经 SSH 调用本机 Mac/Windows 工具 |
+| 收录 | 推文发布于 2026-11-06。2026-11-16 按仓库所有者要求收录此链接。只作参考，不转载正文，不等于推荐部署 |
+
+该方案出口是机房 VPS，不是 ISP/住宅出口。网页工作台若直接挂公网，等于把能执行命令的入口暴露到互联网。桥接用本机账号权限，不是隔离沙箱。作者本人也写明服务器位置不改变账号资格、不保证不封。本库收录不等于推荐部署；出口 IP 不代替资格。见 [安全与账号](12-security-and-accounts.md)。
 
 下面是社区工具仓库，单独收录，不与上面的经验帖混为一条。
 
