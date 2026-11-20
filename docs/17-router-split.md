@@ -18,7 +18,7 @@
 
 这是「国内直连，其余境外流量走同一条 ISP」。不是只把 Claude 官方域名钉到代理上。只钉官方域名会漏掉遥测和相关请求，那些请求若从家宽出去，就变成 ISP 和家宽两个出口。
 
-社区清单只用来看补齐性和容易漏的域名。不原样导入 one-exit、v2fly、Loyalsoldier、blackmatrix7、ip.net.coffee。收录不等于采用。夙愿学长条目里的 claude-cleanup 已经收录，边界仍是不执行，这里不重复收。来源见 [社区参考](13-sources.md#社区参考)。
+社区清单只用来看补齐性和容易漏的域名。不原样导入 one-exit、v2fly、Loyalsoldier、blackmatrix7、ip.net.coffee、homeport。收录不等于采用。check-cc 是第三方环境打分站，不是官方结论，也不当验收工具。不装一键修复程序，不跑修复脚本。语言、时区、出口对齐不是官方政策，不采用。夙愿学长条目里的 claude-cleanup 已经收录，边界仍是不执行，这里不重复收。来源见 [社区参考](13-sources.md#社区参考)。
 
 ## 验收还要看的事
 
