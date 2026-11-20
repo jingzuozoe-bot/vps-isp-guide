@@ -184,6 +184,76 @@
 | 是什么 | 社区开源的分流规则、复写规则及脚本仓库，供 Quantumult X、Surge、Clash 等使用。它不是手机卡方案，也不是「VPS 中转 + 固定 ISP 出口」 |
 | 收录 | 2026-11-12 按仓库所有者要求收录此链接。收录不等于推荐现在安装或采用这套规则 |
 
+下面是 2026-11-20 收录的路由分流参考。只记链接，不导入规则，不现在部署。原则见 [路由分流（待验，先不部署）](17-router-split.md)。夙愿学长条目里的 claude-cleanup 仍是不执行，这里不重复收录。
+
+| 项目 | 内容 |
+|---|---|
+| 原文链接 | https://x.com/biggor888/status/2122709044867760214 |
+| 作者 | @biggor888（Samgor） |
+| 是什么 | 指出 Claude Code 会向 Datadog `http-intake.logs.us5.datadoghq.com` 发运行遥测。分流若只放行官方 Claude 域名，这条请求可能走别的出口。社区经验帖，不是官方文档 |
+| 收录 | 推文发布于 2026-11-17 15:10 UTC（台北时间 2026-11-17 23:10）。2026-11-20 按仓库所有者要求收录此链接。只作参考，不转载正文 |
+
+对得上官方企业网络配置。官方还列了 `browser-intake-us5-datadoghq.com`。作者说的「加入 proxy 列表」是为了出口一致，不是封号开关。本库不把追单个域名当成实现方案。
+
+| 项目 | 内容 |
+|---|---|
+| 原文链接 | https://x.com/LuckyJoe198x/status/2123207881474678983 |
+| 作者 | @LuckyJoe198x（Joe） |
+| 是什么 | 认为不必为了海外环境去托管 Mac Mini，可以在 VPS 上跑 Claude CLI，用 Magpie 传回本机。作者说 Magpie 只是传话，真正发起请求的是 VPS 上的 Claude CLI，与 CLIProxy 那类自建反代不是一类。社区经验帖，不是官方文档 |
+| 收录 | 推文发布于 2026-11-19 00:13 UTC（台北时间 2026-11-19 08:13）。2026-11-20 按仓库所有者要求收录此链接。只作参考，不转载正文 |
+
+这不是本库已定的 Mini 远程方案三，见 [Mini 远程](16-mini-remote.md)。「干净 VPS」通常仍是机房 IP，不等于干净家宽。不部署 Magpie，不把网关暴露到公网，不用它替代方案三。
+
+下表只列本条提到的两条公开链接，只作来源，不部署。
+
+| 相关链接 | 是什么 |
+|---|---|
+| https://github.com/yetone/magpie | Magpie 仓库。只作来源，不部署 |
+| https://usemagpie.ai | Magpie 站点首页。只作来源，不部署 |
+
+| 项目 | 内容 |
+|---|---|
+| 原文链接 | https://github.com/wquguru/one-exit |
+| 作者 | wquguru |
+| 是什么 | Clash Party / Shadowrocket / FlClash 模板，把 Claude、遥测以及 Google、Stripe、Persona 等域名钉到同一条静态住宅代理。拓扑是本机到中转再到住宅出口。规则里含 `datadoghq.com` 与 `browser-intake` 关键词。社区规则仓库，不是官方文档 |
+| 收录 | 2026-11-20 按仓库所有者要求收录此链接。只作参考，不导入 |
+
+不导入。中转全灭时作者写的回滚是改回直连，这不是断网保护。支付和身份核验域名对齐不是官方政策，不采用。IPv6 `2607:6bc0` 它建议拒绝，与 ip.net.coffee 页建议走代理相反，留给验收时再测。
+
+| 项目 | 内容 |
+|---|---|
+| 原文链接 | https://ip.net.coffee/claude/site.html |
+| 作者 | Net.Coffee |
+| 是什么 | 社区整理的 Claude Code 域名分流清单，含遥测、IP/ASN 兜底，以及 Persona 等核验域名。并指出 `browser-intake-us5-datadoghq.com` 不能靠 `DOMAIN-SUFFIX,datadoghq.com` 匹配。不是官方文档 |
+| 收录 | 2026-11-20 按仓库所有者要求收录此链接。只作参考，不导入 |
+
+不导入。把 NTP 说成时区风控开关是错的：NTP 只对 UTC 表，不改本机时区，不采纳。IPv6 建议与 one-exit 相反，待验。支付和核验域名对齐不采用。
+
+| 项目 | 内容 |
+|---|---|
+| 原文链接 | https://github.com/v2fly/domain-list-community/blob/master/data/anthropic |
+| 作者 | v2fly/domain-list-community |
+| 是什么 | 社区 geosite anthropic 列表。2026-11-20 核对时已包含 `http-intake.logs.us5.datadoghq.com` 与一条 Sentry，当时未列 `browser-intake-us5-datadoghq.com`。不是官方文档 |
+| 收录 | 2026-11-20 按仓库所有者要求收录此链接。只作参考，不导入为实现 |
+
+只作参考，不导入为实现。清单会变，以库中当前文件为准。
+
+| 项目 | 内容 |
+|---|---|
+| 原文链接 | https://github.com/v2fly/domain-list-community/blob/master/data/category-ai-!cn |
+| 作者 | v2fly/domain-list-community |
+| 是什么 | 境外 AI 大类，include anthropic、openai、cursor 等。对「不限于 Claude」有参考价值。只用这个大类去钉产品，仍不等于「国内直连 + 其余走同一条 ISP」。不是官方文档 |
+| 收录 | 2026-11-20 按仓库所有者要求收录此链接。只作参考，不原样导入 |
+
+| 项目 | 内容 |
+|---|---|
+| 原文链接 | https://antifyapp.com/en/ |
+| 作者 | Antify |
+| 是什么 | 用系统扩展按应用把流量送到已有代理，不靠系统代理，也不开 TUN。它自己不提供代理服务。收录时记下的版本是 v0.0.92（2026-11-19），macOS 14+。只收官网首页 |
+| 收录 | 2026-11-20 按仓库所有者要求收录此链接。只作参考，不安装 |
+
+不能替代路由透明代理，只管勾选的应用。现在不装。路由验收后不要再叠一层。备份会把代理密码明文写进文件。不写安装教程。
+
 社区提到的商业产品。只收官网首页，不收邀请码。不写入上面的官方供应商表，也不据此改采购。
 
 | 项目 | 内容 |
@@ -200,4 +270,4 @@
 | 是什么 | 社区提到的跨境多币种账户/虚拟卡类支付产品，不是手机卡，也不是网络出口方案。只收官网首页。官网自称与新加坡 MAS 监管相关；这被理解为支付机构牌照而不是银行牌照。本库不做独立核验，不把该说法当成已核实结论 |
 | 收录 | 2026-11-12 按仓库所有者要求收录此链接。收录不等于推荐开户 |
 
-这些帖子是关于海外环境、账号使用、自建线路和分流的社区写法，另有一篇 iPhone 上 Shadowrocket 的用法教程，还收了夙愿学长的一篇社区经验帖；Claude Switcher、小小东 VPS 方案和 blackmatrix7 规则仓库是社区工具。CliProxy 与 StarryBlu 只出现在「社区提到的商业产品」里，只收官网首页。它们都不是 Anthropic、IPRoyal 或其他供应商的官方文档，也不是官方客户端。本库只保留链接作参考，不转载正文。收录不等于推荐现在安装、部署、采购或开户，也不等于采用这些写法或方案。不收录邀请码与推广链接。出口 IP 不代替目标服务的地区、身份、支付和用途资格；本库不采用其中关于地区、身份、支付伪装或规避限制的步骤。见 [安全与账号](12-security-and-accounts.md)。
+这些帖子是关于海外环境、账号使用、自建线路和分流的社区写法，另有一篇 iPhone 上 Shadowrocket 的用法教程，还收了夙愿学长的一篇社区经验帖。2026-11-20 又收了路由分流参考：Samgor、Joe 的 Magpie 帖、one-exit、Net.Coffee、v2fly 的两份列表和 Antify 首页。这些分流来源只作参考，不等于导入规则或现在部署；Claude Switcher、小小东 VPS 方案和 blackmatrix7 规则仓库是社区工具。CliProxy 与 StarryBlu 只出现在「社区提到的商业产品」里，只收官网首页。它们都不是 Anthropic、IPRoyal 或其他供应商的官方文档，也不是官方客户端。本库只保留链接作参考，不转载正文。收录不等于推荐现在安装、部署、采购或开户，也不等于采用这些写法或方案。不收录邀请码与推广链接。出口 IP 不代替目标服务的地区、身份、支付和用途资格；本库不采用其中关于地区、身份、支付伪装或规避限制的步骤。见 [安全与账号](12-security-and-accounts.md)。
